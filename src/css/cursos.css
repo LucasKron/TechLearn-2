@@ -1,0 +1,25 @@
+
+
+.bgbody{
+    background-color: #123858;
+}
+
+.cormensagem{
+    color: white;
+    text-align: center;
+    line-height:0.35;
+}
+
+#corTech{
+    color:#00B9BF;
+}
+
+.categoria{
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+    color: white;
+
+}
+
+.boxcursos
