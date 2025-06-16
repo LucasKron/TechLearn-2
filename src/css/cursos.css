@@ -130,7 +130,7 @@ div.item{
 }
 
 .parent .item p{
-  margin-top: 45px;
+  margin-top: 15px;
 }
 
 .grid-button{
@@ -158,4 +158,18 @@ div.item {
 
 div.item:hover {
   transform: scale(1.03); /* aumenta levemente */
+}
+
+.imgcurso{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.imagemcuso img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
 }
