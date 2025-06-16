@@ -1,29 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="caminho/para/script.js"></script>
+    <link href="./ui/fontawesome-free-6.7.2-web/css/all.min.css" rel="stylesheet" />
     <title>Home</title>
 </head>
 <body>
     <div id="container" class="raleway">
         <!--Nav---------->
-        <section>      
+        <section>
             <nav id="nav-home">
-                <a id="logo-techlearn" href="#"><img src="./imagens/logo_techlearn.png" alt="logo"></a>
-                <a href="#"><p>TechLearn</p></a>
-                <ul id="nav-content">
-                    <li class="hover-underline-animation center"><a href="#">Cursos</a></li>
-                    <li class="hover-underline-animation center"><a href="#">Suporte</a></li>
-                    <li class="hover-underline-animation center"><a href="#">Assinatura</a></li>
-                    <li class="hover-underline-animation center"><a href="#">Cadastro</a></li>
-                    <li class="hover-underline-animation center"><a href="#">Login</a></li>
-                </ul>
+                <div id="logo-techlearn">
+                    <a href="#"><img src="./imagens/logo_techlearn.png" alt="logo"></a>
+                    <a href="#">
+                        <p>TechLearn</p>
+                    </a>
+                </div>
+                <div id="nav-center-right">
+                    <ul class="nav-center">
+                        <li class="hover-underline-animation center links"><a href="#">Cursos</a></li>
+                        <li class="hover-underline-animation center links"><a href="#">Suporte</a></li>
+                        <li class="hover-underline-animation center links"><a href="#">Assinatura</a></li>
+                        <li class="hover-underline-animation center links"><a href="#">Sobre</a></li>
+                    </ul>
+
+                    <ul class="nav-right">
+                        <li class="hover-underline-animation center links"><a href="#">Cadastrar</a></li>
+                        <li><a href="#" id="signup-button">Entrar</a></li>
+                    </ul>
+                </div>
             </nav>
         </section>
         <!---------------->
+        <section>
+            <div id="info-home">
+                <h1>Aprendizado tecnólogico para todas as idades, <span style="color: cyan;">TechLearn</span> do</h1>
+                <h1>básico ou avançado</h1>
+            </div>
+            <div id="info-assinatura">
+                <div class="button-container">
+                    <p id="text-assinatura">Aprenda as tecnologias mais demandadas pelo mercado e avance na sua carreira
+                        com os melhores cursos de tecnologia!</p>
+                    <button id="start-journey">Comece sua jornada</button>
+                    <button id="browse-courses">Explorar cursos</button>
+                </div>
+                <div id="stats">
+                    <div id="active-students">
+                    <h1>50K+</h1>
+                    <P>Estudantes ativos</P>
+                    </div>
+                    <div id="advanced-courses">
+                    <h1>50+</h1>
+                    <P>Cursos avançados</P> 
+                    </div>
+                    <div id="job-placement">
+                    <h1>95%</h1>
+                    <P>Empregabilidade</P> 
+                    </div>
+                </div>
+            </div>
+            <div id="info-demand">
+                <h1 style="color: #fff; text-align: center;">Domine as tecnologias mais procuradas pelo mercado</h1>
+                <div id="demand-technology">
+                    
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <p>Programação</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-briefcase"></i>
+                        <p>Pacote Office</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-video"></i>
+                        <p>Edição de videos</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-window-restore"></i>
+                        <p>Desenvolvimento Web</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <p>Power BI</p>
+                    </div>
+                </div>
+            </div>
+            <div id="info">
+                    <h1>Cursos em destaque</h1>
+                    <p>Seleção especial de cursos com especialistas do setor para acelerar sua carreira na tecnologia.</p>
+            </div>
+            <div class="cards-container">
+
+  <div class="card">
+    <div style="position: relative;">
+      <img src="https://reactjs.org/logo-og.png" alt="React Course" />
+      <div class="level-badge" style="top: 12px; right: 12px;">Intermediário</div>
     </div>
+    <div class="card-content">
+      <div class="tags">
+        <span class="tag">React</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Redux</span>
+      </div>
+      <h3>Curso Completo de Desenvolvimento em React</h3>
+      <p class="description">Domine React, Redux e JavaScript moderno. Construa aplicações reais do zero.</p>
+      <div class="info-row">
+        <span><span class="star">★</span> 4.9</span>
+        <span>12.543 alunos</span>
+        <span>32 horas</span>
+      </div>
+      <div class="button-containers">
+        <button>Inicie já</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="position: relative;">
+      <img src="./imagens/python-logo.png" alt="Python Course" />
+      <div class="level-badge" style="top: 12px; right: 12px;">Iniciante</div>
+    </div>
+    <div class="card-content">
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">Django</span>
+        <span class="tag">PostgreSQL</span>
+      </div>
+      <h3>Desenvolvimento Full Stack com Python</h3>
+      <p class="description">Aprenda Python, Django e design de banco de dados. Crie aplicações web dinâmicas.</p>
+      <div class="info-row">
+        <span><span class="star">★</span> 4.8</span>
+        <span>8.932 alunos</span>
+        <span>45 horas</span>
+      </div>
+      <div class="button-containers">
+        <button>Inicie já</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="position: relative;">
+      <img src="./imagens/docker-logo.png" alt="DevOps Course" />
+      <div class="level-badge" style="top: 12px; right: 12px;">Avançado</div>
+    </div>
+    <div class="card-content">
+      <div class="tags">
+        <span class="tag">Docker</span>
+        <span class="tag">Kubernetes</span>
+        <span class="tag">AWS</span>
+      </div>
+      <h3>Bootcamp de Engenharia DevOps</h3>
+      <p class="description">Domine Docker, Kubernetes, CI/CD e estratégias de implantação na nuvem.</p>
+      <div class="info-row">
+        <span><span class="star">★</span> 4.9</span>
+        <span>6.721 alunos</span>
+        <span>28 horas</span>
+      </div>
+      <div class="button-containers">
+        <button>Inicie já</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+        </section>
+    </div>
+    <script src="./script.js"></script>
 </body>
+
 </html>
