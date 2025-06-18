@@ -2,37 +2,102 @@
 
 .raleway {
   font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  /* ou outro peso, como 700 */
+  font-weight: 400; /* ou outro peso, como 700 */
 }
 
 * {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #123858;
 }
 
 body {
-  background-color: #123858;
+  padding-top: 2.1rem;
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 
 /* CONTEÚDO DA NAV */
 
-#nav-content {
+#nav-home{
+  background-color: #01213E;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
   display: flex;
-  flex-direction: row;
-  list-style: none;
-  gap: 1rem;
-  justify-content: end;
-  margin-right: 10px;
-  color: white;
   align-items: center;
-  height: 2.1rem;
-  text-decoration: none;
+  justify-content: space-between;
+  height: 3rem;
 }
 
-#nav-content a {
-  text-decoration: none;
-  color: white;
+#logo-techlearn {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#logo-techlearn img {
+  height: 2rem;
+  width: auto;
+  margin-right: 5px;
+}
+
+#nav-home a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#nav-center-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+/* Menu central */
+.nav-center {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+
+/* Menu à direita */
+.nav-right {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-right: 10px;
+}
+
+#nav-home a#signup-button {
+  color: #01213E;
+  padding: 3px 10px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: 2px solid transparent;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#nav-home a#signup-button:hover {
+  color: #fff;
+  background-color: #001F3F;
+  border: 2px solid #fff;
 }
 
 .hover-underline-animation {
@@ -64,10 +129,6 @@ body {
   transform-origin: bottom center;
 }
 
-#nav-home {
-  background-color: #01213E;
-}
-
 #logo-techlearn img {
   height: 2rem;
   width: auto;
@@ -85,77 +146,208 @@ nav p {
   margin-left: 5px;
 }
 
-/* -----------------------*/
+/* ------------------------------------------*/
 
 .mensagem {
   color: white;
   text-align: center;
   line-height: 2;
-  padding: 3vw;
+  padding: 1rem;
 }
 
 #corTech {
   color: #00B9BF;
 }
 
-.categoria {
-  list-style: none;
+#card-search{
   display: flex;
-  gap: 4rem;
+  justify-content: center;
+  gap: 3px;
+}
+
+#card-search button i{
+  margin-right: 3px;
+}
+
+#Search-courses{
+  background-color: white;
+  border-radius: 8px;
+  width: 30rem;
+  color: black;
+  padding: 10px;
+  font-size: 15px;
+  margin-left: 4.3rem;
+  padding-left: 20px;
+  
+}
+
+.button-filter{
+  width: 70px;
+  height: 40px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 3px solid white;
+  background-color: transparent;
   color: white;
-  padding: 2rem;
+  cursor: pointer;
 }
 
-div.parent {
-  height: 250px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 100px;
-  place-self: center;
-  color: #ffffff;
+.button-filter:hover{
+  border: 3px solid #d6d6d6;
+  color: #d6d6d6;
 }
 
-div.item{
-  min-height: 250px;
-  border: 3px solid black;
-  padding: 5px;
+/* --------------------------------------------------- */
+
+.cards-container {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    padding-top: 20px;
+    margin-left: 15rem;
+  }
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgb(0 0 0 / 0.1);
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+
+  .level-badge {
+    position: absolute;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    border-radius: 12px;
+    top: 12px;
+    right: 12px;
+  }
+
+  .card-content {
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tags {
+    margin-bottom: 0.75rem;
+  }
+
+  .tag {
+    display: inline-block;
+    background: #e0e0e0;
+    color: #333;
+    border-radius: 12px;
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
+    margin: 0 0 0.5rem 0;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    color: #666;
+    flex-grow: 1;
+  }
+
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0 1.5rem 0;
+    font-size: 0.85rem;
+    color: #444;
+  }
+
+  .info-row span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .star {
+    color: gold;
+  }
+
+  .button-containers {
+    text-align: center;
+  }
+
+  .card button {
+    background-color: #0d1b36;
+    border: none;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .card button:hover {
+    background-color: #2c4ac7;
+  }
+
+  .card:hover{
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover{
+    transform: scale(1.03); 
+    box-shadow: 0 0 10px 2px #ffffff; 
+  }
+
+  #info{
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  text-align: center;
+  margin-bottom: 35px;
+  margin-top: 4rem;
+}
+
+#info-demand{
   background-color: #01213E;
   border-radius: 8px;
+  min-height: 170px;
+  padding: 1.5rem;
 
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
-  text-align: center;
-  height: 150px;
+  justify-content: center; /* centraliza verticalmente */
+  align-items: center;     /* centraliza horizontalmente */
+  text-align: center;;
 }
 
-.parent .item p{
-  margin-top: 45px;
-}
-
-.grid-button{
-  border: 2px solid white;
-  text-decoration: none;
+#demand-technology {
   color: #fff;
-  padding: 8px 20px;
-  border-radius: 4px;
-  margin-top: auto;
-  margin-bottom: 20px;
-  margin-right: 10px;
-  margin-left: 10px;
-  transition: background-color 0.3s, color 0.3s;
-  font-weight: 600
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  text-align: center;
+  justify-content: center;
+  margin-top: 25px;
+  
 }
 
-.grid-button:hover{
-  background-color: #fff;
-  color:#001F3F;
-}
-
-div.item {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-div.item:hover {
-  transform: scale(1.03); /* aumenta levemente */
+#demand-technology div:hover {
+  color: #aebcf2;
+  cursor: pointer;
 }
