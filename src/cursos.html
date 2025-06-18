@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/cursos.css">
+    <link href="./ui/fontawesome-free-6.7.2-web/css/all.min.css" rel="stylesheet" />
     <script src="caminho/para/script.js"></script>
     <title>Cursos</title>
 </head>
@@ -14,17 +15,25 @@
         <!--Nav---------->
         <section>
             <nav id="nav-home">
-                <a id="logo-techlearn" href="#"><img src="./imagens/logo_techlearn.png" alt="logo"></a>
-                <a href="#">
-                    <p>TechLearn</p>
-                </a>
-                <ul id="nav-content">
-                    <li class="hover-underline-animation center"><a href="#">Cursos</a></li>
-                    <li class="hover-underline-animation center"><a href="#">Suporte</a></li>
-                    <li class="hover-underline-animation center"><a href="#">Assinatura</a></li>
-                    <li class="hover-underline-animation center"><a href="#">Cadastro</a></li>
-                    <li class="hover-underline-animation center"><a href="#">Login</a></li>
-                </ul>
+                <div id="logo-techlearn">
+                    <a href="#"><img src="./imagens/logo_techlearn.png" alt="logo"></a>
+                    <a href="#">
+                        <p>TechLearn</p>
+                    </a>
+                </div>
+                <div id="nav-center-right">
+                    <ul class="nav-center">
+                        <li class="hover-underline-animation center links"><a href="#">Cursos</a></li>
+                        <li class="hover-underline-animation center links"><a href="#">Suporte</a></li>
+                        <li class="hover-underline-animation center links"><a href="#">Assinatura</a></li>
+                        <li class="hover-underline-animation center links"><a href="#">Sobre</a></li>
+                    </ul>
+
+                    <ul class="nav-right">
+                        <li class="hover-underline-animation center links"><a href="#">Cadastrar</a></li>
+                        <li><a href="#" id="signup-button">Entrar</a></li>
+                    </ul>
+                </div>
             </nav>
         </section>
         <!---------------->
@@ -35,37 +44,233 @@
         <h3>Selecione um de nossos cursos para prosseguir com o aprendizado
         </h3>
     </div>
-    <div>
-        <ul class="categoria">
-            <li>Categoria</li>
-            <li>Ameba</li>
-            <li>Amoeba</li>
-        </ul>
+    <div id="card-search">
+        <input id="Search-courses" type="text" placeholder="Digite aqui!">
+        <button class="button-filter"><i class="fa-solid fa-filter"></i>Filtros</button>
     </div>
-    <div class="parent">
-        <div class="item">
-            <div class="imgcurso"><img src="/imagens/html_curso.png" alt="img curso html"></div>
-            <p>o <span style="color: rgb(3, 168, 3);">TechLearn</span> tem funcionamento gratuito para a todos
-                os cursos básicos e intermediáros, comece a
-                agora mesmo a aprender clicando em saiba mais!
-            </p>
-            <a href="#" class="grid-button">COMECE AQUI!</a>
+    <div class="cards-container">
+
+        <div class="card">  <!-- CURSO 1 -->
+            <div style="position: relative;">
+                <img src="https://reactjs.org/logo-og.png" alt="React Course" />
+                <div class="level-badge" style="top: 12px; right: 12px;">Intermediário</div>
+            </div>
+            <div class="card-content">
+                <div class="tags">
+                    <span class="tag">React</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Redux</span>
+                </div>
+                <h3>Curso Completo de Desenvolvimento em React</h3>
+                <p class="description">Domine React, Redux e JavaScript moderno. Construa aplicações reais do zero.</p>
+                <div class="info-row">
+                    <span><span class="star">★</span> 4.9</span>
+                    <span>12.543 alunos</span>
+                    <span>32 horas</span>
+                </div>
+                <div class="button-containers">
+                    <button>Inicie já</button>
+                </div>
+            </div>
         </div>
-        <div class="item">
-            <h3>Pago</h3>
-            <p>Assinando o <span style="color: #0047e0;">TechLearn + </span>além de nos ajudar a manter o
-                projeto, você terá a acesso a conteúdos
-                extras, cetificados e suporte de nossos profissionais.
-            </p>
-            <a href="#" class="grid-button">COMECE AQUI!</a>
+
+        <div class="card">  <!-- CURSO 2 -->
+            <div style="position: relative;">
+                <img src="./imagens/python-logo.png" alt="Python Course" />
+                <div class="level-badge" style="top: 12px; right: 12px;">Iniciante</div>
+            </div>
+            <div class="card-content">
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Django</span>
+                    <span class="tag">PostgreSQL</span>
+                </div>
+                <h3>Desenvolvimento Full Stack com Python</h3>
+                <p class="description">Aprenda Python, Django e design de banco de dados. Crie aplicações web dinâmicas.
+                </p>
+                <div class="info-row">
+                    <span><span class="star">★</span> 4.8</span>
+                    <span>8.932 alunos</span>
+                    <span>45 horas</span>
+                </div>
+                <div class="button-containers">
+                    <button>Inicie já</button>
+                </div>
+            </div>
         </div>
-        <div class="item">
-            <h3>PowerPoint</h3>
-            <p>O <span style="color:orange;">PowerPoint</span> é um aplicativo focado em apresentações. Com ele voce pode organizar as suas apresentações.
-            </p>
-            <a href="#" class="grid-button">COMECE AQUI!</a>
+
+        <div class="card">  <!-- CURSO 3 -->
+            <div style="position: relative;">
+                <img src="./imagens/docker-logo.png" alt="DevOps Course" />
+                <div class="level-badge" style="top: 12px; right: 12px;">Avançado</div>
+            </div>
+            <div class="card-content">
+                <div class="tags">
+                    <span class="tag">Docker</span>
+                    <span class="tag">Kubernetes</span>
+                    <span class="tag">AWS</span>
+                </div>
+                <h3>Bootcamp de Engenharia DevOps</h3>
+                <p class="description">Domine Docker, Kubernetes, CI/CD e estratégias de implantação na nuvem.</p>
+                <div class="info-row">
+                    <span><span class="star">★</span> 4.9</span>
+                    <span>6.721 alunos</span>
+                    <span>28 horas</span>
+                </div>
+                <div class="button-containers">
+                    <button>Inicie já</button>
+                </div>
+            </div>
         </div>
+        <div class="card">  <!-- CURSO 4 -->
+            <div style="position: relative;">
+                <img src="/imagens/Node.jsLOGO.png" alt="Node.js Course" />
+                <div class="level-badge" style="top: 12px; right: 12px;">Intermediário</div>
+            </div>
+            <div class="card-content">
+                <div class="tags">
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Express</span>
+                    <span class="tag">MongoDB</span>
+                </div>
+                <h3>API REST com Node.js e MongoDB</h3>
+                <p class="description">Aprenda a construir APIs modernas com Node.js, Express e MongoDB. Ideal para aplicações escaláveis.</p>
+                <div class="info-row">
+                    <span><span class="star">★</span> 4.8</span>
+                    <span>10.412 alunos</span>
+                    <span>38 horas</span>
+                </div>
+                <div class="button-containers">
+                    <button>Inicie já</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">  <!-- CURSO 5 -->
+            <div style="position: relative;">
+                <img src="./imagens/AWS-LOGO.png" alt="AWS Course" />
+                <div class="level-badge" style="top: 12px; right: 12px;">Avançado</div>
+            </div>
+            <div class="card-content">
+                <div class="tags">
+                    <span class="tag">AWS</span>
+                    <span class="tag">Terraform</span>
+                    <span class="tag">DevOps</span>
+                </div>
+                <h3>Infraestrutura como Código com AWS e Terraform</h3>
+                <p class="description">Gerencie infraestrutura em nuvem com segurança e automação usando AWS e Terraform.
+                </p>
+                <div class="info-row">
+                    <span><span class="star">★</span> 4.9</span>
+                    <span>4.765 alunos</span>
+                    <span>30 horas</span>
+                </div>
+                <div class="button-containers">
+                    <button>Inicie já</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">  <!-- CURSO 6 -->
+            <div style="position: relative;">
+                <img src="./imagens/html_curso.png" alt="html Course" />
+                <div class="level-badge" style="top: 12px; right: 12px;">Iniciante</div>
+            </div>
+            <div class="card-content">
+                <div class="tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+                <h3>Fundamentos do Desenvolvimento Web</h3>
+                <p class="description">Aprenda a criar páginas web interativas com HTML, CSS e JavaScript do zero.</p>
+                <div class="info-row">
+                    <span><span class="star">★</span> 4.7</span>
+                    <span>18.320 alunos</span>
+                    <span>25 horas</span>
+                </div>
+                <div class="button-containers">
+                    <button>Inicie já</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">  <!-- CURSO 7 -->
+            <div style="position: relative;">
+                <img src="imagens/Kubernetes-LOGO.png" alt="Kubernetes Course" />
+                <div class="level-badge" style="top: 12px; right: 12px;">Avançado</div>
+            </div>
+            <div class="card-content">
+                <div class="tags">
+                    <span class="tag">Kubernetes</span>
+                    <span class="tag">Containers</span>
+                    <span class="tag">Helm</span>
+                </div>
+                <h3>Orquestração de Containers com Kubernetes</h3>
+                <p class="description">Domine o Kubernetes para escalar, implantar e gerenciar containers em ambientes complexos.</p>
+                <div class="info-row">
+                    <span><span class="star">★</span> 4.9</span>
+                    <span>3.210 alunos</span>
+                    <span>35 horas</span>
+                </div>
+                <div class="button-containers">
+                    <button>Inicie já</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">  <!-- CURSO 8 -->
+            <div style="position: relative;">
+                <img src="./imagens/Next.js-LOGO.png" alt="Next.js Course" />
+                <div class="level-badge" style="top: 12px; right: 12px;">Iniciante</div>
+            </div>
+            <div class="card-content">
+                <div class="tags">
+                    <span class="tag">Next.js</span>
+                    <span class="tag">React</span>
+                    <span class="tag">SSR</span>
+                </div>
+                <h3>Desenvolvimento com Next.js</h3>
+                <p class="description">Explore o framework Next.js para aplicações React com renderização no servidor e SEO otimizado.
+                </p>
+                <div class="info-row">
+                    <span><span class="star">★</span> 4.8</span>
+                    <span>7.654 alunos</span>
+                    <span>29 horas</span>
+                </div>
+                <div class="button-containers">
+                    <button>Inicie já</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">  <!-- CURSO 9 -->
+            <div style="position: relative;">
+                <img src="./imagens/Git-LOGO.png" alt="Git Course" />
+                <div class="level-badge" style="top: 12px; right: 12px;">Avançado</div>
+            </div>
+            <div class="card-content">
+                <div class="tags">
+                    <span class="tag">Git</span>
+                    <span class="tag">GitHub</span>
+                    <span class="tag">Versionamento</span>
+                </div>
+                <h3>Controle de Versão com Git e GitHub</h3>
+                <p class="description">Aprenda a usar Git e GitHub para gerenciar projetos de software de forma eficiente e colaborativa.</p>
+                <div class="info-row">
+                    <span><span class="star">★</span> 4.7</span>
+                    <span>15.098 alunos</span>
+                    <span>20 horas</span>
+                </div>
+                <div class="button-containers">
+                    <button>Inicie já</button>
+                </div>
+            </div>
+        </div>
+
     </div>
+    </section>
+    </div>
+    <script src="./"></script>
 </body>
 
 </html>
