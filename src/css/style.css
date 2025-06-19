@@ -167,8 +167,10 @@ body {
   text-align: center;
 }
 
-.button-container button {
-  text-align: center;
+.button-style{
+  display: inline-block; /* ou block */
+  text-decoration: none;
+  margin-top: 20px;
 }
 
 #browse-courses{
