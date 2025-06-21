@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap');
+
+.raleway {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400; /* ou outro peso, como 700 */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+  background: #333359;
+  background: linear-gradient(90deg, rgba(51, 51, 89, 1) 0%, rgba(12, 12, 120, 1) 100%);
+  scroll-behavior: smooth;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* CONTEÚDO DA NAV */
+
+#nav-home{
+  background-color: #01213E;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3rem;
+}
+
+#logo-techlearn {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#logo-techlearn img {
+  height: 2rem;
+  width: auto;
+  margin-right: 5px;
+}
+
+#nav-home a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#nav-center-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+/* Menu central */
+.nav-center {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+
+/* Menu à direita */
+.nav-right {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-right: 10px;
+}
+
+#nav-home a#signup-button {
+  color: #01213E;
+  padding: 3px 10px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: 2px solid transparent;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#nav-home a#signup-button:hover {
+  color: #fff;
+  background-color: #001F3F;
+  border: 2px solid #fff;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 0.1rem;
+  bottom: -2px;
+  left: 0;
+  background-color: #ffffff;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+}
+
+.hover-underline-animation.center::after {
+  transform-origin: bottom center;
+}
+
+.hover-underline-animation.center:hover::after {
+  transform-origin: bottom center;
+}
+
+#nav-content a#signup-button{
+  color: #01213E;
+  padding: 3px 10px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: 2px solid transparent;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#signup-button i{
+  margin-right: 8px;
+}
+
+#nav-content a#signup-button:hover {
+  color: #fff;
+  background-color: #001F3F;
+  border: 2px solid #fff;
+}
+
+body {
+  padding-top: 2.1rem;
+}
+
+#footer{
+  display: flex;
+  color: #fff;
+  align-items: center;
+  min-height: 50px;
+  background-color: #01213E;
+  width: 100%;
+}
+
+#footer-home{
+  margin-left: 5px;
+}
+
+#container-card {
+    width: 100%;
+    max-width: 35rem;
+    place-self: center;
+    margin-bottom: 70px;
+    margin-top: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.card-header {
+    text-align: center;
+    padding: 1.5rem 1.5rem 0;
+}
+
+.card-header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #111827;
+    margin-bottom: 0.25rem;
+}
+
+.card-header p {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.card-content {
+    padding: 0.2rem;
+    place-self: center;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+#first-name{
+  margin-right: 15px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 0.625rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    background: white;
+    transition: border-color 0.15s ease-in-out;
+}
+
+.input-wrapper input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.input-wrapper input.error {
+    border-color: #ef4444;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+.error-message {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    color: #ef4444;
+    min-height: 1rem;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-top: 0.125rem;
+}
+
+.checkbox-group label {
+    font-size: 0.875rem;
+    color: #374151;
+    margin-bottom: 0;
+}
+
+.checkbox-group a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.checkbox-group a:hover {
+    text-decoration: underline;
+}
+
+.submit-btn {
+    width: 100%;
+    background: #111827;
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+    margin-bottom: 1rem;
+}
+
+.submit-btn:hover {
+    background: #1f2937;
+}
+
+.submit-btn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+.sign-in-link {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.sign-in-link a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.sign-in-link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
