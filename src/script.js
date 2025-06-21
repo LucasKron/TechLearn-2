@@ -34,7 +34,7 @@ function togglePassword(fieldId) {
 const SUPABASE_URL = 'https://prgqlljavrgteqvflcqy.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InByZ3FsbGphdnJndGVxdmZsY3F5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA1MjA3OTMsImV4cCI6MjA2NjA5Njc5M30.V_qIskDuZvViFaettAKxiLTfo2SKwJmWT-6XcqELWEk'; // mantenha sua chave real aqui
 
-const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 document.getElementById('registrationForm').addEventListener('submit', async function (e) {
     e.preventDefault();
@@ -71,7 +71,7 @@ document.getElementById('registrationForm').addEventListener('submit', async fun
     submitBtn.textContent = 'Criando conta...';
     submitBtn.disabled = true;
 
-    const { data, error } = await supabase.auth.signUp({
+    const { data, error } = await supabaseClient.auth.signUp({
         email,
         password: senha,
         options: {
