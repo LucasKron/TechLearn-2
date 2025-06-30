@@ -179,7 +179,7 @@ body {
 }
 
 .card {
-    height: 300px;
+    height: 400px;
     background: white;
     border-radius: 0.5rem;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
@@ -306,4 +306,15 @@ body {
     .form-row {
         grid-template-columns: 1fr;
     }
+}
+
+.rememberUser {
+  font-size: 13px;
+  padding-top: 2px;
+  display: inline-block;
+}
+
+#cadInfo{
+  font-size: small;
+  padding-top: 10px;
 }

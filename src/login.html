@@ -33,7 +33,7 @@
                     <ul class="nav-right">
                         <li class="hover-underline-animation center links"><a
                                 href="cadastro.html"><span>Cadastrar</span></a></li>
-                        <li><a href="#" id="signup-button">
+                        <li><a href="login.html" id="signup-button">
                                 <i class="fa-solid fa-right-to-bracket"></i>Entrar</a></li>
                     </ul>
                 </div>
@@ -62,8 +62,12 @@
                                 <button type="button" class="toggle-password"
                                     onclick="togglePassword('password')">👁</button>
                             </div>
+                            <input type="checkbox" name="remember">
+                            <span class="rememberUser">Lembrar Login</span>
+                            <p id="cadInfo">Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
                             <span class="error-message" id="passwordError"></span>
                         </div>
+
                         <button type="submit" class="login-btn">Login</button>
                     </form>
                 </div>
