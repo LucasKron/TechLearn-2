@@ -31,9 +31,42 @@ function togglePassword(fieldId) {
     }
 }
 
-function showError(fieldId, message) {
-    const errorElement = document.getElementById(fieldId + 'Error');
-    const field = document.getElementById(fieldId);
-    if (errorElement) errorElement.textContent = message;
-    if (field) field.classList.add('error');
-}
+document.getElementById('registrationForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    // Limpa mensagens anteriores
+    document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+    document.querySelectorAll('input').forEach(el => el.classList.remove('error'));
+
+    // Campos
+    const nome = document.getElementById('firstName').value.trim();
+    const sobrenome = document.getElementById('lastName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const telefone = document.getElementById('phone').value.trim();
+    const senha = document.getElementById('password').value;
+    const confirmarSenha = document.getElementById('confirmPassword').value;
+    const cpf = document.getElementById('cpf').value.trim();
+    const termos = document.getElementById('terms').checked;
+
+    let isValid = true;
+
+    if (!nome) { showError('firstName', 'Nome é obrigatório'); isValid = false; }
+    if (!sobrenome) { showError('lastName', 'Sobrenome é obrigatório'); isValid = false; }
+    if (!email || !/\S+@\S+\.\S+/.test(email)) { showError('email', 'Email inválido'); isValid = false; }
+    if (!telefone || !/^\+?[\d\s\-\(\)]+$/.test(telefone)) { showError('phone', 'Número inválido'); isValid = false; }
+    if (!senha || senha.length < 8) { showError('password', 'Senha precisa de pelo menos 8 caracteres'); isValid = false; }
+    if (senha !== confirmarSenha) { showError('confirmPassword', 'Senhas não coincidem'); isValid = false; }
+    if (!termos) { showError('terms', 'Você precisa aceitar os termos'); isValid = false; }
+
+    if (!isValid) return;
+
+    if (error) {
+        alert("Erro ao criar conta: " + error.message);
+    } else {
+        alert("Conta criada! Verifique seu email.");
+        document.getElementById('registrationForm').reset();
+    }
+
+    submitBtn.textContent = 'Criar conta';
+    submitBtn.disabled = false;
+});
