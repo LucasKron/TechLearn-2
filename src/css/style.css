@@ -2,7 +2,7 @@
 
 .raleway {
   font-family: "Raleway", sans-serif;
-  font-weight: 400; /* ou outro peso, como 700 */
+  font-weight: 400; 
 }
 
 * {
@@ -168,7 +168,7 @@ body {
 }
 
 .button-style{
-  display: inline-block; /* ou block */
+  display: inline-block; 
   text-decoration: none;
   margin-top: 20px;
 }

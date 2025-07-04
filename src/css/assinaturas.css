@@ -2,7 +2,7 @@
 
 .raleway {
   font-family: "Raleway", sans-serif;
-  font-weight: 400; /* ou outro peso, como 700 */
+  font-weight: 400; 
 }
 
 * {
@@ -189,7 +189,6 @@ body {
   margin: 0 auto;
 }
 
-/* Card Base */
 .card { 
   display: flex;
   flex-direction: column;
@@ -200,8 +199,8 @@ body {
   border-radius: 12px;
   transition: all 0.3s ease;
   width: 300px;
-  overflow: visible; /* Changed from hidden to visible */
-  margin-top: 1rem; /* Added margin for badge space */
+  overflow: visible; 
+  margin-top: 1rem; 
   min-height: 619px;
 }
 
@@ -210,10 +209,9 @@ body {
   transform: scale(1.05);
 }
 
-/* Popular Badge - Fixed positioning */
 .popular-badge {
   position: absolute;
-  top: -12px; /* Adjusted position */
+  top: -12px;
   left: 50%;
   transform: translateX(-50%);
   background: linear-gradient(135deg, #06b6d4, #2563eb);
@@ -223,11 +221,10 @@ body {
   font-size: 0.875rem;
   font-weight: bold;
   z-index: 10;
-  white-space: nowrap; /* Prevents text wrapping */
-  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3); /* Added shadow for better visibility */
+  white-space: nowrap; 
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
 }
 
-/* Card Header */
 .card-header {
   text-align: center;
   padding: 2rem 1.5rem;
@@ -294,7 +291,6 @@ body {
   margin: 0;
 }
 
-/* Card Content */
 .card-content {
   flex: 1;
   display: flex;
@@ -322,7 +318,6 @@ body {
   flex-shrink: 0;
 }
 
-/* Card Button */
 .card-button {
   width: 100%;
   padding: 12px 0;
@@ -335,7 +330,6 @@ body {
   margin-top: auto;
 }
 
-/* Button for popular plan */
 .card-button.popular {
   background: linear-gradient(135deg, #06b6d4, #2563eb);
   color: white;
@@ -345,7 +339,6 @@ body {
   background: linear-gradient(135deg, #0891b2, #1d4ed8);
 }
 
-/* Button for other plans */
 .card-button.default {
   background: white;
   color: #1e293b;
